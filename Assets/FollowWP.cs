@@ -9,9 +9,15 @@ public class FollowWP : MonoBehaviour
 
     public float speed = 10.0f;
     public float rotSpeed = 10.0f;
+
+    GameObject tracker;
+
     void Start()
     {
-        
+        tracker = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+        DestroyImmediate(tracker.GetComponent<Collider>());
+        tracker.transform.position = this.transform.position;
+        tracker.transform.rotation = this.transform.rotation;
     }
 
     
