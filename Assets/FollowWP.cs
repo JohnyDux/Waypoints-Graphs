@@ -36,12 +36,10 @@ public class FollowWP : MonoBehaviour
     {
         ProgressTracker();
 
-        //this.transform.LookAt(waypoints[currentWP].transform);
+        Quaternion lookatWP = Quaternion.LookRotation(tracker.transform.position - this.transform.position);
 
-        //Quaternion lookatWP = Quaternion.LookRotation(waypoints[currentWP].transform.position - this.transform.position);
+        this.transform.rotation = Quaternion.Slerp(this.transform.rotation, lookatWP, rotSpeed * Time.deltaTime);
 
-        //this.transform.rotation = Quaternion.Slerp(this.transform.rotation, lookatWP, rotSpeed * Time.deltaTime);
-
-        //this.transform.Translate(0, 0, speed * Time.deltaTime);
+        this.transform.Translate(0, 0, speed * Time.deltaTime);
     }
 }
