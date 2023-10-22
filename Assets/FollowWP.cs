@@ -29,7 +29,7 @@ public class FollowWP : MonoBehaviour
             currentWP = 0;
 
         tracker.transform.LookAt(waypoints[currentWP].transform);
-        tracker.transform.Translate(0, 0, 0.1f);
+        tracker.transform.Translate(0, 0, (speed + 2) * Time.deltaTime);
     }
     
     void Update()
