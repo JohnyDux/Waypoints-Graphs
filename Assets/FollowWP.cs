@@ -20,21 +20,28 @@ public class FollowWP : MonoBehaviour
         tracker.transform.rotation = this.transform.rotation;
     }
 
-    
-    void Update()
+    void ProgressTracker()
     {
-        if (Vector3.Distance(this.transform.position, waypoints[currentWP].transform.position) < 3)
+        if (Vector3.Distance(tracker.transform.position, waypoints[currentWP].transform.position) < 3)
             currentWP++;
 
         if (currentWP >= waypoints.Length)
             currentWP = 0;
 
+        tracker.transform.LookAt(waypoints[currentWP].transform);
+        tracker.transform.Translate(0, 0, 0.1f);
+    }
+    
+    void Update()
+    {
+        ProgressTracker();
+
         //this.transform.LookAt(waypoints[currentWP].transform);
 
-        Quaternion lookatWP = Quaternion.LookRotation(waypoints[currentWP].transform.position - this.transform.position);
+        //Quaternion lookatWP = Quaternion.LookRotation(waypoints[currentWP].transform.position - this.transform.position);
 
-        this.transform.rotation = Quaternion.Slerp(this.transform.rotation, lookatWP, rotSpeed * Time.deltaTime);
+        //this.transform.rotation = Quaternion.Slerp(this.transform.rotation, lookatWP, rotSpeed * Time.deltaTime);
 
-        this.transform.Translate(0, 0, speed * Time.deltaTime);
+        //this.transform.Translate(0, 0, speed * Time.deltaTime);
     }
 }
