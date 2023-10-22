@@ -35,7 +35,13 @@ public class FollowWaypoints : MonoBehaviour
         g.AStar(currentNode, wps[4]);
         currentWP = 0;
     }
-    
+
+    public void GoToFactory()
+    {
+        g.AStar(currentNode, wps[6]);
+        currentWP = 0;
+    }
+
     void LateUpdate()
     {
         if (g.pathList.Count == 0 || currentWP == g.pathList.Count)
