@@ -2233,6 +2233,7 @@ MonoBehaviour:
   - {fileID: 1865072676}
   - {fileID: 114289425}
   speed: 10
+  rotSpeed: 10
 --- !u!4 &7871142010654116010
 Transform:
   m_ObjectHideFlags: 0
