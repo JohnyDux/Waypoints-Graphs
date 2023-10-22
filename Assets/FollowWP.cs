@@ -17,7 +17,7 @@ public class FollowWP : MonoBehaviour
     
     void Update()
     {
-        if (Vector3.Distance(this.transform.position, waypoints[currentWP].transform.position) < 3)
+        if (Vector3.Distance(this.transform.position, waypoints[currentWP].transform.position) < 10)
             currentWP++;
 
         if (currentWP >= waypoints.Length)

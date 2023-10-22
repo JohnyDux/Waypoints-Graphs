@@ -357,7 +357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 35c1c886898f94ca0833cccc2e3388a4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 52.722015
+      value: 44.01
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 35c1c886898f94ca0833cccc2e3388a4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2233,7 +2233,7 @@ MonoBehaviour:
   - {fileID: 1865072676}
   - {fileID: 114289425}
   speed: 10
-  rotSpeed: 10
+  rotSpeed: 0.5
 --- !u!4 &7871142010654116010
 Transform:
   m_ObjectHideFlags: 0
