@@ -9,6 +9,7 @@ public class FollowWP : MonoBehaviour
 
     public float speed = 10.0f;
     public float rotSpeed = 10.0f;
+    public float lookAhead = 10.0f;
 
     GameObject tracker;
 
@@ -22,6 +23,8 @@ public class FollowWP : MonoBehaviour
 
     void ProgressTracker()
     {
+        if (Vector3.Distance(tracker.transform.position, this.transform.position) > lookAhead) return;
+
         if (Vector3.Distance(tracker.transform.position, waypoints[currentWP].transform.position) < 3)
             currentWP++;
 
