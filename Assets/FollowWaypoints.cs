@@ -19,7 +19,7 @@ public class FollowWaypoints : MonoBehaviour
     {
         wps = wpManager.GetComponent<WPManager>().waypoints;
         g = wpManager.GetComponent<WPManager>().graph;
-        currentNode = wps[0];
+        currentNode = wps[7];
 
         Invoke("GoToRuin", 2);
     }
